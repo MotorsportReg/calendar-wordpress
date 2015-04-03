@@ -1,0 +1,38 @@
+
+.msrcalendar h2 { font-size: 125%; font-weight: bold; margin-bottom: 5px; padding: 10px 0 0 10px; color: #369AC9; }
+
+.msrcalendar table { 
+margin:0; 
+border-collapse:collapse; 
+width: 100%; 
+font: 100% verdana, arial, sans-serif;
+color:#444;
+}
+.msrcalendar table thead td { padding-bottom: 10px; }
+.msrcalendar table thead th {
+font-size:90%;
+font-weight:bold;
+text-align: left;
+padding:4px 0 4px 10px;
+background:none;
+border-style:solid;
+border-color:#369AC9;
+border-width:0 0 1px 0;
+color:#369AC9;
+white-space:nowrap;
+} 
+
+.msrcalendar table tbody td { 
+padding:10px; 
+border-style:solid; 
+border-color:#ccc; 
+border-width:0 0 1px 0; 
+}
+
+.msrcalendar table tbody td a.imglink { color: #8DD252; }
+.msrcalendar table tbody td a.imglink:hover { background: none; }
+
+.msrcalendar table tbody td a.txtlink { color: #369AC9; }
+
+/* please do not remove the morelink; this is the only requirement for using the wordpress plugin is to leave an unedited link back to MSR.com, thanks! */
+.msrcalendar .morelink { font-size: 85%; font-weight: normal; padding-left: 10px; }
