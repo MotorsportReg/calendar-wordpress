@@ -40,4 +40,4 @@ There are two ways of embedding the MotorsportReg.com calendar in your Wordpress
   ```
   You can obtain your Organization-Id from your [admin here](https://www.motorsportreg.com/em360/index.cfm/event/profile.api).
 
-Tested as far back as Wordpress ~2.5 or so.  Should be compatible with the latest and greatest.  Please report an issue if you encounter issues: https://github.com/MotorsportReg/calendar-wordpress/issues 
+Tested as far back as Wordpress ~2.5 or so.  Should be compatible with the latest and greatest.  Please report here if you encounter issues: https://github.com/MotorsportReg/calendar-wordpress/issues 
