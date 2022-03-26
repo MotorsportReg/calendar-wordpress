@@ -275,8 +275,8 @@ if(count($events)){
 		$out .='<tr>';
 	
 		if($field_eventdate){
-			$start=$event[start];
-			$end=$event[end];
+			$start=$event['start'];
+			$end=$event['end'];
 			if(!$end)
 				$out .='<td>'.date_display_formate($start).'</td>';
 			else
@@ -284,28 +284,28 @@ if(count($events)){
 		}
 	
 		if($field_eventname)
-			$out .='<td>'.$event[name].'</td>';
+			$out .='<td>'.$event['name'].'</td>';
 	
 		if($field_organization)
-			$out .='<td>'.$event[organization][name].'</td>';
+			$out .='<td>'.$event['organization']['name'].'</td>';
 	
 		if($field_venue)
-			$out .='<td>'.$event[venue][name].'</td>';
+			$out .='<td>'.$event['venue']['name'].'</td>';
 	
 		if($field_venuecity)
-			$out .='<td>'.$event[venue][city].', '.$event[venue][region].'</td>';
+			$out .='<td>'.$event['venue']['city'].', '.$event['venue']['region'].'</td>';
 	
 		if($field_eventtype)
-			$out .='<td>'.$event[type].'</td>';
+			$out .='<td>'.$event['type'].'</td>';
 	
-		$r_start=$event[registration][start];
-		$r_end=$event[registration][end];
+		$r_start=$event['registration']['start'];
+		$r_end=$event['registration']['end'];
 		$flag=registr_display_formate($r_start,$r_end);
 		if($show){
 			if($flag)
-				$out .='<td><a href="'.$event[detailuri].'" class="imglink"><img src="' . plugins_url('calendar/images/register.gif', __FILE__) . '" height="17" width="85" alt="Register now on MotorsportReg.com" /></a></td>';
+				$out .='<td><a href="'.$event['detailuri'].'" class="imglink"><img src="' . plugins_url('calendar/images/register.gif', __FILE__) . '" height="17" width="85" alt="Register now on MotorsportReg.com" /></a></td>';
 			else
-				$out .='<td><a href="'.$event[detailuri].'" class="txtlink">More Details</a></td>';
+				$out .='<td><a href="'.$event['detailuri'].'" class="txtlink">More Details</a></td>';
 		}
 
 $out .='</tr>';
