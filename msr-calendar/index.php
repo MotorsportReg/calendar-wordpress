@@ -225,7 +225,9 @@ $field_eventdate=get_option('msr_calendar_display_field_eventdate');
 $title=get_option('msr_calendar_title');
 $data1 = json_decode($xml, true);
 $event_tot=$data1["recordset"]["total"];
-if($event_tot == 1){
+if ($event_tot == 0){
+$events= array();	
+}else if($event_tot == 1){
 $events= $data1["events"]; 
 }else{
 $events= $data1["events"]["event"]; 
