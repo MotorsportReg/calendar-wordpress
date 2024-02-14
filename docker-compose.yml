@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  wordpress:
+    image: wordpress
+    ports:
+      - "84:80" # port 84 is passed to port 80 by the ELB for {username}.dev.msreg.dev; we're just leveraging the default load balancer rule here
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: calendar_wordpress
+      WORDPRESS_DB_USER: test_user
+      WORDPRESS_DB_PASSWORD: test_password
+    volumes:
+      - ./msr-calendar:/var/www/html/wp-content/plugins/msr-calendar
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: test_root_password
+      MYSQL_DATABASE: calendar_wordpress
+      MYSQL_USER: test_user
+      MYSQL_PASSWORD: test_password
+    volumes:
+      - type: volume
+        source: db-data
+        target: /var/lib/mysql
+      # using a bind mount to bootstrap with a configured database for testing
+      - type: bind
+        source: ./mysql-backup
+        target: /docker-entrypoint-initdb.d
+
+volumes:
+  db-data:

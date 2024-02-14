@@ -1,5 +1,5 @@
 
-.msrcalendar h2 { font-size: 125%; font-weight: bold; margin-bottom: 5px; padding: 10px 0 0 10px; color: #369AC9; }
+.msrcalendar h2 { font-size: 150%; font-weight: bold; margin-bottom: 0.75em; padding: 10px 0 0 10px; color: #369AC9; }
 
 .msrcalendar table { 
 margin:0; 
@@ -10,7 +10,7 @@ color:#444;
 }
 .msrcalendar table thead td { padding-bottom: 10px; }
 .msrcalendar table thead th {
-font-size:90%;
+font-size:80%;
 font-weight:bold;
 text-align: left;
 padding:4px 0 4px 10px;
@@ -20,19 +20,18 @@ border-color:#369AC9;
 border-width:0 0 1px 0;
 color:#369AC9;
 white-space:nowrap;
+text-transform: uppercase;
 } 
 
 .msrcalendar table tbody td { 
-padding:10px; 
+padding:15px; 
 border-style:solid; 
 border-color:#ccc; 
 border-width:0 0 1px 0; 
 }
 
-.msrcalendar table tbody td a.imglink { color: #8DD252; }
-.msrcalendar table tbody td a.imglink:hover { background: none; }
-
-.msrcalendar table tbody td a.txtlink { color: #369AC9; }
+.msrcalendar table tbody td a.txtlink_register { background-color: #369AC9; color: white; border-radius: 5px; padding: 10px; margin: 5px 5px; text-decoration: none; cursor: pointer; border: none; }
+.msrcalendar table tbody td a.txtlink_details { color: #369AC9; background-color: white; border-radius: 5px; padding: 10px; text-decoration: none; cursor: pointer; border: 2px solid #369AC9; }
 
 /* please do not remove the morelink; this is the only requirement for using the wordpress plugin is to leave an unedited link back to MSR.com, thanks! */
-.msrcalendar .morelink { font-size: 85%; font-weight: normal; padding-left: 10px; }
+.msrcalendar .morelink { font-size: 85%; font-weight: normal; padding-left: 10px; padding-top: 10px; }
